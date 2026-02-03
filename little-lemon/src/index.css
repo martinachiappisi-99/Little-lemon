@@ -1,13 +1,590 @@
-body {
+
+/* =====================
+   RESET
+===================== */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* =====================
+   NAV
+===================== */
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+.navbar-logo
+{
+width:200px;
+margin: 15px;
+}
+.navbar ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.navbar li a:hover {
+  color: #f4ce14;
+}
+
+
+/* =====================
+   HOME / SPECIALS
+===================== */
+.specials {
+  background-color: #495e57;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.specials h1 {
+  font-size: 64px;
+  color: #f4ce14;
+}
+
+.specials h2 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.specials p {
+  max-width: 600px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 42px;
+  color: #495e57;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =====================
+   BOOKING PAGE
+===================== */
+.booking-page {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.booking-page h1 {
+  text-align: center;
+  color: #495e57;
+  margin-bottom: 30px;
+}
+
+.booking-page form {
+  display: grid;
+  gap: 20px;
+}
+
+.booking-page label {
+  font-weight: bold;
+}
+
+.booking-page input,
+.booking-page select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.booking-page button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.booking-page button:hover {
+  background-color: #e5bd13;
+}
+
+/* =====================
+   MENU PAGE
+===================== */
+.menu-page {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.menu-page h1 {
+  text-align: center;
+  color: #495e57;
+  margin-bottom: 40px;
+}
+
+.menu-page .menu-item {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* =====================
+   ORDER PAGE
+===================== */
+.order-page {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.order-page h1 {
+  color: #495e57;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   LOGIN PAGE
+===================== */
+.login-page {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.login-page h1 {
+  text-align: center;
+  color: #495e57;
+  margin-bottom: 30px;
+}
+
+.login-page form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-page input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  margin-top: 100px;
+  padding: 30px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .specials h1 {
+    font-size: 48px;
+  }
+
+  .specials h2 {
+    font-size: 32px;
+  }
+}
+
+
+/* ===== SPECIALS ===== */
+.specials {
+  padding: 4rem 8%;
+  background-color: #ededed;
+  
+}
+.cta p
+{
+  margin-top:20px;
+}
+
+.cta img 
+{
+  border-radius: 15px;
+  width:250px;
+  display: flex;
+  align-items: first baseline;
+}
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.specials-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.specials-button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.specials p
+{
+  color:black;
+}
+.specials-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.special-card {
+  background-color: #edefee;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.special-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title h3 {
+  font-size: 1.2rem;
+}
+
+.price {
+  color: #ee9972;
+  font-weight: bold;
+}
+
+.order-btn {
+  margin-top: auto;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.special-card:hover {
+  transform: translateY(-10px); /* solleva la card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ombra più marcata */
+}
+
+/* Call To Action */
+.cta {
+  background-color:#495e57; /* colore brillante per attirare attenzione */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f4ce14;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.cta button {
+  background-color:#f4ce14;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta button:hover {
+  background-color:#e5bd13;
+}
+
+/* Testimonial Section */
+.testimonials {
+  background-color: #ee9972;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonials-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.testimonials-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonials-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonials-card h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.cta {
+  display: flex;
+  align-items: center; /* allinea verticalmente testo e immagine */
+  gap: 20px; /* spazio tra testo e immagine */
+}
+
+.cta img {
+  width: 300px; /* regola la larghezza come vuoi */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.chicago {
+  background-color:#495e57;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.chicago h1 {
+  font-size: 3rem;
+  color:#f4ce14;
+  margin-bottom: 10px;
+}
+
+.chicago p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.chicago-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spazio tra le immagini */
+  flex-wrap: wrap; /* va a capo se lo schermo è piccolo */
+}
+
+.chicago-images img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.chicago-images img:hover {
+  transform: scale(1.05); /* leggero zoom al passaggio del mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sezione Specials */
+.specials {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Header: titolo + pulsante */
+.specials-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Spazio tra titolo e pulsante */
+  margin-bottom: 40px; /* Spazio tra header e cards */
+}
+
+.specials-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.specials-button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .specials-cards {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .specials-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Order Form */
+.order-page form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.order-page label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.order-page input,
+.order-page select,
+.order-page textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.order-page input:focus,
+.order-page select:focus,
+.order-page textarea:focus {
+  border-color: #f4ce14;
+  box-shadow: 0 0 5px rgba(244, 206, 20, 0.5);
+  outline: none;
+}
+
+.order-page textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.order-page button[type="submit"] {
+  background-color: #f4ce14;
+  color: #333;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.order-page button[type="submit"]:hover {
+  background-color: #e0b812;
+  transform: scale(1.05);
 }
